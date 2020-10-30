@@ -1,0 +1,71 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/bargain/index",
+      "style": {
+        "navigationBarTitleText": "砍价"
+      }
+    },
+    {
+      "path": "pages/mine/index",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+    {
+      "path": "pages/help/index",
+      "style": {
+        "navigationBarTitleText": "HELP ME"
+      }
+    },
+    {
+      "path": "pages/advertise/index",
+      "style": {
+        "navigationBarTitleText": "扫码添加“雅宝新城福利群”"
+      }
+    },
+    {
+      "path": "pages/langimg/index",
+      "style": {
+        "navigationBarTitleText": "收官力作，新品加推"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#f5bbcd",
+    "selectedColor": "#fff",
+    "backgroundColor": "#ed819b",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/home.png",
+        "selectedIconPath": "./static/home_on.png"
+      },
+      {
+        "pagePath": "pages/bargain/index",
+        "text": "砍价",
+        "iconPath": "./static/bargain.png",
+        "selectedIconPath": "./static/bargain_on.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "./static/mine.png",
+        "selectedIconPath": "./static/mine_on.png"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}
