@@ -7,6 +7,7 @@
       :style="scrollTop"
       @click="saveImage"
     ></image>
+    <!-- 快速关注公众号 -->
     <view class="attention">
       <official-account style=""></official-account>
     </view>

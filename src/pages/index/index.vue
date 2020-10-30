@@ -1,15 +1,20 @@
 <template>
   <view class="content">
     <view class="container" v-if="isUserinfo">
-      <view class="pageBox" style="padding: 10% 10%;">
+      <view class="pageBox" style="padding: 10% 10%">
         <view
-          style="height: 1px; width: 100%; margin: 20px auto; background:#E8E8E8;"
+          style="
+            height: 1px;
+            width: 100%;
+            margin: 20px auto;
+            background: #e8e8e8;
+          "
         ></view>
-        <view style="margin: 40px 0;">
-          <text style="color: #000000;font-weight: bold;"
+        <view style="margin: 40px 0">
+          <text style="color: #000000; font-weight: bold"
             >申请获取以下权限</text
           >
-          <text style="color: #C1B6B4;">获得你的公开信息（昵称，头像等）</text>
+          <text style="color: #c1b6b4">获得你的公开信息（昵称，头像等）</text>
         </view>
         <button
           class="btn"
@@ -21,10 +26,11 @@
         </button>
       </view>
     </view>
-
+    <!-- 快速关注公众号 -->
     <!-- <view class="attention">
       <official-account style=""></official-account>
     </view> -->
+    <official-account style=""></official-account>
     <!-- swipwer -->
     <swiper class="swiperTop" :swiperList="swiper"></swiper>
     <!-- 长图 -->
@@ -128,9 +134,9 @@ export default {
     that.getPIc();
     // 检验、登录
     wx.checkSession({
-      success: function(r) {
+      success: function (r) {
         uni.getUserInfo({
-          success: function(result) {
+          success: function (result) {
             console.log("result", result);
             that.nickName = result.userInfo.nickName;
             that.nickUrl = result.userInfo.avatarUrl;
@@ -141,15 +147,15 @@ export default {
         });
         //session_key 未过期，并且在本生命周期一直有效
       },
-      fail: function() {
+      fail: function () {
         //session_key 已经失效，需要重新执行登录流程
         // 是否已授权
         uni.getSetting({
-          success: function(res) {
+          success: function (res) {
             if (res.authSetting["scope.userInfo"]) {
               that.isUserinfo = false;
               uni.getUserInfo({
-                success: function(result) {
+                success: function (result) {
                   // console.log(res.userInfo);
                   that.nickName = result.userInfo.nickName;
                   that.nickUrl = result.userInfo.avatarUrl;
@@ -182,7 +188,7 @@ export default {
   },
 
   methods: {
-    onShareAppMessage: function(res) {
+    onShareAppMessage: function (res) {
       console.log(res);
       if (res.from == "button") {
       }
@@ -246,7 +252,7 @@ export default {
             duration: 20000,
           });
 
-          setTimeout(function() {
+          setTimeout(function () {
             uni.hideToast();
             uni.switchTab({
               url: "/pages/bargain/index",
@@ -291,7 +297,7 @@ export default {
           mask: true,
           duration: 2000,
         });
-        setTimeout(function() {
+        setTimeout(function () {
           that.isUserinfo = false;
           that.getLogin();
         }, 2000);
@@ -306,7 +312,7 @@ export default {
         uni.showModal({
           title: "提示",
           content: "您已经选择过奖品，是否进入砍价",
-          success: function(res) {
+          success: function (res) {
             if (res.confirm) {
               console.log("用户点击确定");
               uni.switchTab({
