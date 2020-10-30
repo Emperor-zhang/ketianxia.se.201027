@@ -30,7 +30,6 @@
     <!-- <view class="attention">
       <official-account style=""></official-account>
     </view> -->
-    <official-account style=""></official-account>
     <!-- swipwer -->
     <swiper class="swiperTop" :swiperList="swiper"></swiper>
     <!-- 长图 -->
